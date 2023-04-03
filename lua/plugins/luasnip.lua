@@ -2,6 +2,12 @@ return {
   'L3MON4D3/LuaSnip',                               -- https://github.com/L3MON4D3/LuaSnip
   event = "VeryLazy",
   build = 'make install_jsregexp',
+  dependences = {
+      'honza/vim-snippets',                           -- https://github.com/honza/vim-snippets
+      config = function()
+        require("luasnip.loaders.from_snipmate").lazy_load()
+      end,
+  },
   keys = function()
     return {
       { "<C-l>",
@@ -51,7 +57,7 @@ return {
       ext_opts = {
         [types.choiceNode] = {
           active = {
-            virt_text = { { "●", "#ff0000" } }, -- { '<- Current Choice', 'NonTest' }
+            virt_text = { { "●", "#1b1d2b" } }, -- { '<- Current Choice', 'NonTest' }
           },
         },
       },
@@ -60,6 +66,7 @@ return {
     --require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/smithwebdev/snippets/" })
     require("luasnip.loaders.from_lua").load({ paths = "~/.config/Lazy/lua/snippets/" })
 
+    ls.filetype_extend("all", { '_' })
     --[[ keybinds ]]
     --
     --------------------------------------------------------------------------------
