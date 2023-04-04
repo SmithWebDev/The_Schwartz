@@ -67,6 +67,7 @@
   "persistence.nvim": { "branch": "main", "commit": "c814fae5c37aa0aba9cd9da05df6e52b88d612c3" },
   "playground": { "branch": "master", "commit": "4044b53c4d4fcd7a78eae20b8627f78ce7dc6f56" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
+  "spread.nvim": { "branch": "main", "commit": "ced38ee20f76375e29a86f754583b6871c92d13c" },
   "syntax-tree-surfer": { "branch": "master", "commit": "6571f0fe11463ea094f3dec1c8ca925daad70693" },
   "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "f044050da3ec6e1cdb31985beecec6810cc27f0b" },
   "telescope-luasnip.nvim": { "branch": "master", "commit": "849c4ee1951f34041a26744d2a88284545564ff0" },
