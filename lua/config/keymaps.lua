@@ -125,10 +125,10 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Go to the top window", sile
 
 --[[ Alternative file explorer ]]
 -----------------------------------------------
-vim.keymap.set("n", "<leader><leader>e", ":Lex 30<CR>", {
-  desc = "Open File Explorer to the left",
-  silent = true,
-})
+--vim.keymap.set("n", "<leader><leader>e", ":Lex 30<CR>", {
+--  desc = "Open File Explorer to the left",
+--  silent = true,
+--})
 
 --[[ Highly Used CLI commands ]]
 ------------------------------------------------
