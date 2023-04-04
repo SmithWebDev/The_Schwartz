@@ -1,6 +1,7 @@
 return {
   'pwntester/octo.nvim',                            -- https://github.com/pwntester/octo.nvim
   dependencies = {
+    'xiyaowong/telescope-octo-commands.nvim',       -- https://github.com/xiyaowong/telescope-octo-commands.nvim
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
   },

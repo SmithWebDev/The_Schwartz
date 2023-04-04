@@ -1,8 +1,13 @@
 return {
   'ThePrimeagen/harpoon', -- https://github.com/ThePrimeagen/harpoon
+  dependencies = {
+    'nvim-telescope/telescope.nvim',
+    'asbjornhaland/telescope-send-to-harpoon.nvim',  -- https://github.com/asbjornhaland/telescope-send-to-harpoon.nvim
+  },
   event = 'VeryLazy',
   config = function()
     require('telescope').load_extension('harpoon')
+    --require('telescope').load_extension('send_to_harpoon')
   end,
   keys = {
     { '<leader>sj', ':Telescope harpoon marks<CR>', desc = 'Show Harpoon Marks (Telescope)'},
