@@ -8,7 +8,7 @@ return {
   {
     'B4mbus/oxocarbon-lua.nvim', --https://github.com/B4mbus/oxocarbon-lua.nvim
     init = function()
-      vim.g.oxocarbon_lua_transparent = true
+      vim.g.oxocarbon_lua_transparent = false
       vim.g.oxocarbon_lua_alternative_telescope = true
     end
   },
