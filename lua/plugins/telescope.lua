@@ -16,6 +16,10 @@ return {
     telescope.load_extension('send_to_harpoon')
 
     opts.defaults.mappings = {
+      i = {
+        --['<c-j>'] = require("telescope.actions")
+        --['<c-k>'] =
+      },
       n = {
         ['<c-h>'] = telescope.extensions.send_to_harpoon.actions.send_selected_to_harpoon
       },
@@ -23,6 +27,11 @@ return {
   end,
   keys = {
     {'<leader><Space>', false},
+    {
+      '<leader>ff',
+      function() require('telescope.builtin').find_files() end,
+      desc = 'Telescope Find Files'
+    },
     {
       "<leader>sp",
       function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
@@ -34,8 +43,8 @@ return {
       desc = 'Telescope LuaSnip',
     },
     {
-      '<leader><leader>sr', -- rails rails_related_files
-      ':Telescope rails_related_files<CR>',
+      '<leader>fR', -- rails rails_related_files
+      ':Telescope rails_related_files',
       desc = 'Telescope Rails Related Files',
     },
     --{
