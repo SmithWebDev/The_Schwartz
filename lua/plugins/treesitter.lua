@@ -38,6 +38,7 @@ return {
         'scss',
         --  'tsx',
         --  'typescript',
+        'vimdoc',
         --  'yaml'
       },
       sync_install = true,
