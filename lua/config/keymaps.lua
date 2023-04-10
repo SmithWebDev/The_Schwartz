@@ -19,6 +19,8 @@ vim.keymap.set("i", "<C-l>", "<Esc>$a", { desc = "Jump to end of line while in I
 vim.keymap.set("n", "<", "<gv", { desc = "Alternative Shift Tab (indent)", silent = true })
 vim.keymap.set("n", ">", ">gv", { desc = "Alternative Tab (indent)", silent = true })
 vim.keymap.set("n", "<leader>b", ":b<Space>", { desc = "Switch to buffer", silent = true })
+vim.keymap.set("n", "<leader>bj", ":bnext<CR>", { desc = "Switch to next buffer", silent = true })
+vim.keymap.set("n", "<leader>bk", ":bprev<CR>", { desc = "Switch to previous buffer", silent = true })
 vim.keymap.set("n", "<leader>ls", ":ls<CR>", { desc = "List open files", silent = true })
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save shortcut", silent = true })
 vim.keymap.set("n", "<leader>W", ":wall<CR>", { desc = "Save all shortcut", silent = true })
