@@ -39,7 +39,7 @@ return {
             require('luasnip').jump(-1)
           end
         end, mode = { "i", "s" }
-      }
+  }
     }
   end,
   config = function()
@@ -92,8 +92,8 @@ return {
       end
     end)
 
-    --vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]])
-    --vim.keymap.set("n", "<leader><leader>se", ":LuaSnipEdit<CR>", { desc = 'Edit LuaSnip', silent = true })
+    vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]])
+    vim.keymap.set("n", "<leader>se", ":LuaSnipEdit<CR>", { desc = 'Edit LuaSnip', silent = true })
     --vim.keymap.set({ "i", "s" }, "<c-u>", '<cmd>lua require("luasnip.extras.select_choice")()<cr><C-c><C-c>')
   end
 }
