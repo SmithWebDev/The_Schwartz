@@ -26,7 +26,7 @@ return {
       },
       sidebars = {},
       terminal_colors = true,
-      transparent = false,
+      transparent = true,
     }
   },
 }
