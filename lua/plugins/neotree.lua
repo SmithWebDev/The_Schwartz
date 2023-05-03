@@ -3,13 +3,11 @@ return {
     'nvim-neo-tree/neo-tree.nvim',                    -- https://github.com/nvim-neo-tree/neo-tree.nvim
     opts = {
       close_if_last_window = true,
-      filesystem = {
-        window = {
-          width = 30,
-          mappings = {
-            ["-"] = "open_split",
-            ["\\"] = "open_vsplit",
-          },
+      window = {
+        width = 30,
+        mappings = {
+          ["-"] = "open_split",
+          ["\\"] = "open_vsplit",
         },
       },
     },
@@ -21,6 +19,7 @@ return {
     opts = {
       autoselect_one = true,
       include_current_win = false,
+      use_winbar = 'always',
       filter_rules = {
         -- filter using buffer options
         bo = {

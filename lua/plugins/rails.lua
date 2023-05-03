@@ -176,7 +176,7 @@ return {
       vim.keymap.set('n', '<leader><leader>rgv',  ':Generate component<Space>',                      { desc = 'Rails Generate View Component', silent = true  })
     end
   },
-{
+  {
     'weizheheng/ror.nvim',                            -- https://github.com/weizheheng/ror.nvim
     dependencies = {
       'rcarriga/nvim-notify',                         -- https://github.com/rcarriga/nvim-notify
@@ -191,9 +191,9 @@ return {
     'neovim/nvim-lspconfig',
     opts = {
       servers = {
-        solargraph = {},
         ruby_ls = {},
-        standardrb = {}
+        solargraph = {},
+        --standardrb = {}
       },
     },
   }

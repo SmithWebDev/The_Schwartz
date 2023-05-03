@@ -7,6 +7,7 @@ return {
       build = ':TSUpdate'
     }
   },
+  event = "bufReadPost",
   config = function()
     vim.o.foldcolumn = '1'
     vim.o.foldlevel = 99
