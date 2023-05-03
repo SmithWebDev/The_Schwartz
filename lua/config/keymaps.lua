@@ -132,6 +132,10 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Go to the top window", sile
 --  silent = true,
 --})
 
+--[[ Testing Area ]]
+vim.keymap.set('i', '<c-s>', vim.lsp.buf.signature_help, {desc = 'Show Signature Help1 from1 Insert1 mode'})
+
+
 --[[ Highly Used CLI commands ]]
 ------------------------------------------------
 vim.keymap.set("n", "<leader><leader>cya", ":!yarn add<Space>", {
