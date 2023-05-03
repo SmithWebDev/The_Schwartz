@@ -32,8 +32,8 @@ return {
 
     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
       { name = "nvim_lua" },
-      { name = 'cmp-tw2css' },
       { name = 'nvim_lsp_signature_help' },
+      { name = 'cmp-tw2css' },
       { name = 'emoji' },
     }))
     opts.mapping = cmp.mapping.preset.insert({
@@ -44,8 +44,8 @@ return {
           cmp.select_next_item()
         elseif luasnip.expand_or_jumpable() then
           luasnip.expand_or_jump()
-        --elseif has_words_before() then
-        --  cmp.complete()
+        elseif has_words_before() then
+          cmp.complete()
         else
           fallback()
         end
