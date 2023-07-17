@@ -28,4 +28,26 @@ return {
       end
     end,
   },
+  --{
+  --  'razak17/tailwind-fold.nvim', -- https://github.com/razak17/tailwind-fold.nvim
+  --  lazy = true,
+  --  init = function()
+  --    vim.cmd('set conceallevel=2')
+  --    vim.cmd('concealcursor= ...')
+  --  end,
+  --  dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  --  ft = { 'html', 'eruby', 'tyescriptreact', 'javascriptreact' },
+  --},
+  {
+    'laytan/tailwind-sorter.nvim',
+    dependencies = {'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim'},
+    build = 'cd formatter && npm i && npm run build',
+    config = {
+      opts = {
+        on_save_enabled = true,
+        on_save_pattern = { '*.html.erb' },
+        node_path = 'node'
+      }
+    },
+  },
 }

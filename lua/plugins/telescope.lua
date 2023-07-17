@@ -1,3 +1,4 @@
+local octo = require "plugins.octo"
 return {
   'nvim-telescope/telescope.nvim',
   dependencies = {
@@ -19,6 +20,7 @@ return {
       i = {
         --['<c-j>'] = require("telescope.actions")
         --['<c-k>'] =
+        ['<c-h>'] = telescope.extensions.send_to_harpoon.actions.send_selected_to_harpoon
       },
       n = {
         ['<c-h>'] = telescope.extensions.send_to_harpoon.actions.send_selected_to_harpoon
@@ -33,9 +35,9 @@ return {
       desc = 'Telescope Find Files'
     },
     {
-      "<leader>sp",
-      function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-      desc = "Find Plugin File",
+      '<leader>fR', -- rails rails_related_files
+      ':Telescope rails_related_files',
+      desc = 'Telescope Rails Related Files',
     },
     {
       '<leader>sl', -- luasnip
@@ -43,19 +45,24 @@ return {
       desc = 'Telescope LuaSnip',
     },
     {
-      '<leader>fR', -- rails rails_related_files
-      ':Telescope rails_related_files',
-      desc = 'Telescope Rails Related Files',
+      "<leader>sp",
+      function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+      desc = "Find Plugin File",
     },
     --{
     --  '<leader>', -- vimwiki
     --  ,
     --  desc = '',
     --},
-    --{
-    --  '<leader>', -- octo commands
-    --  ,
-    --  desc = '',
-    --},
+    {
+      '<Tab>ft',
+      ':TodoTelescope<CR>',
+      desc = 'Todo telescop list (All todos)'
+    },
+    {
+      '<Tab>fT',
+      ':TodoQuickFix<CR>',
+      desc = 'Todo quickfix list (All todos)'
+    },
   }
 }

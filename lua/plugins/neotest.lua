@@ -1,9 +1,7 @@
 return {
   {
     'nvim-neotest/neotest', -- https://github.com/nvim-neotest/neotest
-    init = function()
-
-    end,
+    init = function() end,
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
       'nvim-neotest/neotest-vim-test',   -- https://github.com/nvim-neotest/neotest-vim-test
@@ -31,52 +29,52 @@ return {
     end,
     keys = {
       {
-        "<leader>ta",
+        "<Tab>Ta",
         function() require('neotest').run.attach() end,
         desc = "Attach Test"
       },
       {
-        "<leader>tcf",
+        "<Tab>Tcf",
         function() require('neotest').run.run(vim.fn.expand('%')) end,
         desc = "Run All Test Current File"
       },
       {
-        "<leader>tj",
+        "<Tab>Tj",
         function() require('neotest').jump.next() end,
         desc = "Jump to Next Test"
       },
       {
-        "<leader>tk",
+        "<Tab>Tk",
         function() require('neotest').jump.prev() end,
         desc = "Jump to Previous Test"
       },
       {
-        "<leader>tn",
+        "<Tab>Tn",
         function() require('neotest').run.run() end,
         desc = "Run Nearest Test Current File"
       },
       {
-        "<leader>tr",
+        "<Tab>Tr",
         function() require('neotest').output.open() end,
         desc = "Toggle Test Result Window"
       },
       {
-        "<leader>ts",
+        "<Tab>Ts",
         function() require('neotest').summary.toggle() end,
         desc = "Toggle Summary Window"
       },
       {
-        "<leader>tu",
+        "<Tab>Tu",
         function() require('neotest').summary.clear_marked() end,
         desc = "Clear Marked Tests"
       },
       {
-        "<leader>tx",
+        "<Tab>Tx",
         function() require('neotest').run.stop() end,
         desc = "Stop Running Tests"
       },
       {
-        "<leader>tz",
+        "<Tab>Tz",
         function() require('neotest').summary.run_marked() end,
         desc = "Run Marked Tests"
       },
