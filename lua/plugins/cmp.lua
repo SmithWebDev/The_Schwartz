@@ -34,6 +34,7 @@ return {
       { name = "nvim_lua" },
       { name = 'nvim_lsp_signature_help' },
       { name = 'cmp-tw2css' },
+      { name = 'neorg' },
       { name = 'emoji' },
     }))
     opts.mapping = cmp.mapping.preset.insert({
@@ -42,8 +43,8 @@ return {
       ['<C-j>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
-        elseif luasnip.expand_or_jumpable() then
-          luasnip.expand_or_jump()
+        elseif luasnip.jumpable() then
+          luasnip.jump(1)
         elseif has_words_before() then
           cmp.complete()
         else
