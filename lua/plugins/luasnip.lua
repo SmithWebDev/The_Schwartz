@@ -3,45 +3,11 @@ return {
   event = "VeryLazy",
   build = 'make install_jsregexp',
   dependences = {
-      'honza/vim-snippets',                           -- https://github.com/honza/vim-snippets
-      config = function()
-        require("luasnip.loaders.from_snipmate").lazy_load()
-      end,
+    'honza/vim-snippets',                           -- https://github.com/honza/vim-snippets
+    config = function()
+      require("luasnip.loaders.from_snipmate").lazy_load()
+    end,
   },
-  keys = function()
-    return {
-      { "<C-l>",
-        function()
-          if require('luasnip').choice_active() then
-            require('luasnip').change_choice(1)
-          end
-        end, mode = { "i", "s" }
-      },
-      { "<C-h>",
-        function()
-          if require('luasnip').choice_active() then
-            require('luasnip').change_choice(-1)
-          end
-        end, mode = { "i", "s" }
-      },
-      {
-        "<C-j>",
-        function()
-          if require('luasnip').jumpable(1) then
-            require('luasnip').jump()
-          end
-        end, mode = { "i", "s" }
-      },
-      {
-        "<C-k>",
-        function()
-          if require('luasnip').jumpable(-1) then
-            require('luasnip').jump(-1)
-          end
-        end, mode = { "i", "s" }
-  }
-    }
-  end,
   config = function()
     local ls = require('luasnip')
     local types = require('luasnip.util.types')
@@ -67,6 +33,11 @@ return {
     require("luasnip.loaders.from_lua").load({ paths = "~/.config/Lazy/lua/snippets/" })
 
     ls.filetype_extend("all", { '_' })
+    ls.filetype_extend("eruby", { "html", "ruby" })
+    ls.filetype_extend("html", { "eruby" })
+    ls.filetype_extend("ruby", { "eruby", 'rspec' })
+    ls.filetype_extend("vimwiki", { "markdown" })
+    ls.filetype_extend("markdown", { "vimwiki" })
     --[[ keybinds ]]
     --
     --------------------------------------------------------------------------------

@@ -7,7 +7,7 @@ return {
     'nvim-treesitter/nvim-treesitter-refactor',     -- https://github.com/nvim-treesitter/nvim-treesitter-refactor
     'nvim-treesitter/nvim-treesitter-textobjects',  -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     'RRethy/nvim-treesitter-textsubjects',          -- https://github.com/RRethy/nvim-treesitter-textsubjects
-    'HiPhish/nvim-ts-rainbow',                      -- https://github.com/HiPhish/nvim-ts-rainbow
+    'HiPhish/nvim-ts-rainbow2',                      -- https://github.com/HiPhish/nvim-ts-rainbow
     'ziontee113/syntax-tree-surfer',                -- https://github.com/ziontee113/syntax-tree-surfer
     'nvim-treesitter/tree-sitter-query',            -- https://github.com/nvim-treesitter/tree-sitter-query
     'windwp/nvim-ts-autotag',                       -- https://github.com/windwp/nvim-ts-autotag
@@ -21,7 +21,9 @@ return {
       ensure_installed = {
         'css',
         --  'dockerfile',
-        --  'elixir',
+        'elixir',
+        'heex',
+        'eex',
         --  'gitignore',
         --  'go',
         --  'graphql',
@@ -45,11 +47,11 @@ return {
       indent = {
         enable = true,
       },
-      --highlight = {
-      --  enable = true,
-      --  disable = { 'org' },
+      highlight = {
+        enable = true,
+        disable = {},
       --  additional_vim_regex_highlighting = { 'org' },
-      --},
+      },
       endwise = {
         enable = true,
       },
@@ -139,7 +141,4 @@ return {
       separator = nil
     })
   end
-
 }
-
-

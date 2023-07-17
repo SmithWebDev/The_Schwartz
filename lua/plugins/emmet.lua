@@ -2,7 +2,7 @@ return {
   {
     'mattn/emmet-vim', -- https://github.com/mattn/emmet-vim
     init = function()
-      vim.g.user_emmet_leader_key = '<leader>,'
+      vim.g.user_emmet_leader_key = '<Tab>,'
       vim.g.user_emmet_settings = {
         javascript = {
           attribute = {
